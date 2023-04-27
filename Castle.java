@@ -13,12 +13,12 @@ public class Castle extends Location {
     public Castle (String Road_Name, String Road_Adress) {
         this.Road_Name = "Castle " ; 
         this.Road_Adress =  "King's Road ";
-        Scanner.Castle_location  = new 
+        System.out.println ("You are at the Castle where the crown is! Will you ~grab~ it or ... ? ");
         
     } 
 
 
-
+    //if or else statement same as other subclasses of location 
 
 
 
