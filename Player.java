@@ -6,16 +6,15 @@ public class Player {
    
     private int energy_value; // Amount of energy the player has 
     Location current_Location; // The locations the player is allowed to go to  
-    private Hashtable<Integer,Items> Player_inventory ;
     private boolean isHolding ; // if the player is holding something or not 
-    private boolean hasCrown ; // if the player has the crown or not,may need method to check for it in inventory 
+    private boolean hasCrown ; // if the player has the crown or not, need method to check for it in inventory 
     private boolean didYouWinFight ; //start with false 
     Opponents opponents ; // The monsters the player is fighting 
 
     
 public Player () {
     this.energy_value = 10;
-    this.Player_inventory =  new Hashtable<Integer,Items> (Player_inventory) ;
+    
     
     
 }
@@ -123,7 +122,7 @@ public void show_Healthlevel(int energy_value) {
     System.out.println("**Your enegy level is " + energy_value + ". Remember you can always eat to get stronger. !**");
 }
 
-public int getEnergy_value() {
+public int energy_value() {
     return this.energy_value;
 }
 
@@ -133,7 +132,9 @@ public boolean getdidYouWinFight() {
     return this.didYouWinFight;
 }
 
-
+public boolean hasCrown() {
+    return this.hasCrown ;
+}
 
 
 public static void main(String[] args) {

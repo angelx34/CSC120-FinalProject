@@ -1,4 +1,4 @@
-import java.util.Hashtable;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -6,14 +6,14 @@ public class Location{
 
 protected String Road_Name; 
 protected  String Road_Adress;
-Hashtable<Integer,Items> inventory ;
+protected ArrayList<Items> inventory ;
 Opponents opponents ;
 Scanner startGame;
 
 public Location(String Road_Name, String Road_Adress) {
     this.Road_Name = Road_Name; 
     this.Road_Adress =  Road_Adress;
-    this.inventory = new Hashtable<Integer,Items>(inventory) ;
+    this.inventory = new ArrayList<Items> () ;
     
 } 
 
