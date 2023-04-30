@@ -1,33 +1,38 @@
 import java.util.Scanner;
+
+
+
 public class GoldenCrown {
     
     
  
 
     
-    Scanner startGame;
-    Location location ;
+    Scanner user_input;
+    
     Player player ; // used to create new player and reference if the player has the crown 
 
-
-    public void start(Scanner startGame, Player player) {
+    
+   
+    public void start(Scanner user_input, Player player, Location location) {
         System.out.println(" WELCOME TO THE GOLDEN CROWN GAME!");
-        System.out.println(" Will you accept the challenge  ");
+        System.out.println(" Will you accept the challenge ");
         System.out.println(" You wake up in a new and strange world. There are two paths that you can go. On the first path you can smell delicious fruits. On the second path you hear waves crashing");
         System.out.println(" Will you go to the Forest or the Beach ! "); 
+        String answer = user_input.nextLine();
         //QUEST START
 
 
 
-        
-        String answer = startGame.nextLine();
-
         if (answer.equals("The Beach") || answer.equals("The beach")||answer.equals("the beach") ) {
-            //not sure how to move on to the beach class 
-            
-        }
+             player.current_Location= new Location("The Beach", "Beach Road");
+             System.out.println(location.toString());
+             
+        }   
+
         else if (answer.equals("The Forest") || answer.equals("The forest")||answer.equals("the forest")) {
-            // same for this
+            player.current_Location= new Location("Groves", "Grove Road");
+            System.out.println(location.toString());
                
         }
         else {
@@ -40,7 +45,7 @@ public class GoldenCrown {
 
     public void win(Player player) {
     
-        //if the person has the crown 
+        //if the person has the crown AND the gloves so it doesnt kill them 
         if (player.hasCrown() ) {
             System.out.println("You won!");
         }
@@ -54,12 +59,20 @@ public class GoldenCrown {
     }
 
 
+public void fullStomach(int energy_value){
+    //not sure where to put this i want 100 to restrain the amount the player  can eat ,specifically playerer
+    if (energy_value <= 100){
+        System.out.println("Eaten!");
+    }else 
+    System.out.println("You are too full, you can't eat anymore !");
+
+}
+
+//create a method to know current location in player
+
 
 public static void main(String[] args) {
    
-
-
-
 
 
 

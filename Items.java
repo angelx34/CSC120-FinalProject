@@ -28,12 +28,12 @@ public class Items {
         return this.digestable ;
     }
 
-    public String getItem_name() {
+    public String get_item_name() {
         return this.item_name;
     }
 
 
-    public String getItem_description() {
+    public String get_item_description() {
         return this.item_description;
     }
 
@@ -43,7 +43,7 @@ public class Items {
     }
 
 
-    public int getEnergy_Value () {
+    public int get_energy_value () {
         return this.energy_value;
     }
 
