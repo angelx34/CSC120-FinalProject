@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 
 
 public class Opponents {
@@ -10,26 +9,21 @@ public class Opponents {
     String opponent_commentary;
     private int opponent_energy_value ;
     private boolean is_opponent_nice; //will the opponent be friendly, add bintu idea 
-    private ArrayList<Items> inventory ;//unsure 
     
     
     
-    public Opponents (String opponents_name,String opponent_commentary,int opponent_energy_value, boolean is_opponent_nice ) {
+    
+    public Opponents (String opponents_name,String opponent_commentary,int opponent_energy_value, boolean is_opponent_nice) {
         this.opponents_name = opponents_name ;
         this.opponent_commentary = opponent_commentary ;
         this.is_opponent_nice = is_opponent_nice ;
         this.opponent_energy_value = opponent_energy_value ;
-        this.inventory = new ArrayList<Items>(inventory);
-            this.inventory.add (new Items ("Castle Key", "You have the keys to the castle.The keys have the adress ~King's Road~.!", false, 0) );
     
     }
 
+   
     
-
-    // remove fromt the opponents inventory 
-
-
-
+    // make  a method to exchange the key 
 
 
 
