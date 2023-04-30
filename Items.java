@@ -51,14 +51,7 @@ public class Items {
 
  public static void main(String[] args) {
 
-    Items Peaches = new Items ("Peaches", "Peaches are a delicious smelling fruit!", true,10 ) ;
-    System.out.println(Peaches.item_name); 
-    Items Lemons = new Items ("Lemons", "It is a tangy but sour yellow fruit !", true, 10) ;
-    System.out.println(Lemons.item_name); 
-    Items Apples = new Items ("Apples", " Apples are a delicious and REALLY healthy fruit!", true, 10) ;
-    System.out.println(Apples.item_name); 
-    Items magicSword = new Items ("Magic Sword", " You have found a magic sword, You are now a REALLY formidable opponent !", false, 0) ;
-    System.out.println(magicSword.item_name); 
+    
  }   
 
 

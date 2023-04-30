@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.Hashtable;
 
 
@@ -6,7 +6,7 @@ public class Location{
 
 protected String Road_Name; 
 protected  String Road_Adress;
-protected ArrayList<Items> inventory ;
+protected Hashtable<Items,String>inventory ;
 protected Hashtable<Opponents,String> Opponents_table;
 
 
@@ -14,9 +14,9 @@ protected Hashtable<Opponents,String> Opponents_table;
 public Location(String Road_Name, String Road_Adress) {
     this.Road_Name = Road_Name; 
     this.Road_Adress =  Road_Adress;
-    this.inventory =  new ArrayList<Items> (inventory) ;
+    this.inventory =  new Hashtable<Items,String> (inventory) ;
     this.Opponents_table = new Hashtable<Opponents,String>(Opponents_table) ;
-    //put and the parameters i set for opponent will show up in each subclass
+    
     
 } 
 

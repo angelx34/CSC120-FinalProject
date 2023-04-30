@@ -12,9 +12,11 @@ public class GoldenCrown {
     
     Player player ; // used to create new player and reference if the player has the crown 
 
+
     
    
     public void start(Scanner user_input, Player player, Location location) {
+         
         System.out.println(" WELCOME TO THE GOLDEN CROWN GAME!");
         System.out.println(" Will you accept the challenge ");
         System.out.println(" You wake up in a new and strange world. There are two paths that you can go. On the first path you can smell delicious fruits. On the second path you hear waves crashing");
@@ -59,21 +61,10 @@ public class GoldenCrown {
     }
 
 
-public void fullStomach(int energy_value){
-    //not sure where to put this i want 100 to restrain the amount the player  can eat ,specifically playerer
-    if (energy_value <= 100){
-        System.out.println("Eaten!");
-    }else 
-    System.out.println("You are too full, you can't eat anymore !");
-
-}
-
-//create a method to know current location in player
-
 
 public static void main(String[] args) {
    
-
+    
 
 
 

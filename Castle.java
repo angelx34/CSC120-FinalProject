@@ -11,11 +11,11 @@ public class Castle extends Location {
     public Castle () {
       super("Castle",  "King's Road ");
       //add to location inventory 
-      this.inventory.add ( new Items ("The Crown", " This is the CROWN, the CROWN of unlimited power !", false, 0)) ;
-      this.inventory.add ( new Items ("Magic Gloves", " These are the King's gloves against the terrible fungi !", false, 0)) ;
+      inventory.put ( new Items ("The Crown", " This is the CROWN, the CROWN of unlimited power !", false, 0),"The Crown" ) ;
+      inventory.put ( new Items ("Magic Gloves", " These are the King's gloves against the terrible fungi !", false, 0), "The Magic Gloves") ;
 
 
-      //add to opponets hastable
+      //add to opponents hastable
       Opponents_table.put(new Opponents("The King","... !.",0,true ),"The King's Corpse");
       Opponents_table.put(new Opponents("The Carnivorous Fungi","... !.",10000000,false ),"The Colorful Mold");
 
@@ -43,7 +43,7 @@ public class Castle extends Location {
         }
         else if (answer_Castle.equals("Coronation Room") || answer_Castle.equals("coronation room")) {
             System.out.println("You walk into the coronation room. The room is in complete silence. You have the Crown in front of you! There is a strange and colorful fungi covering it. Will you grab it!  ");
-            player.hasCrown()==true
+            
             
         }
         else  {

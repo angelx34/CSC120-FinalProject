@@ -7,8 +7,8 @@ public class Beach extends Location{
     public Beach() {
         super("Beach" ,  "Beach Road ");
         //add to inventory of location
-        this.inventory.add ( new Items ("Magic Sword", " You have found a magic sword, You are now a REALLY formidable opponent !", false, 0)) ;
-        this.inventory.add ( new Items ("Old Man's Box ", " This is an a family airloom passed by KIRK's family to store the location of the   !", false, 0)) ;
+        inventory.put ( new Items ("Magic Sword", " You have found a magic sword, You are now a REALLY formidable opponent !", false, 0), "The Magic Sword") ;
+        inventory.put ( new Items ("Old Man's Box ", " This is an a family airloom passed by KIRK's family to store the location of the   !", false, 0), "The Old Man's Box") ;
         //add to hashtable
         Opponents_table.put(new Opponents("Kirk the Golden CROWN guard","OMG A HUMAN ! I havent seen one of you guys for so many years.",50,true ),"The Old Man");
         Opponents_table.put(new Opponents("The Pink Siren","OMG A HUMAN !.",50,false ),"The Siren");
@@ -28,7 +28,7 @@ public class Beach extends Location{
         }
         else if (answer_Beach.equals("Palm Trees") || answer_Beach.equals("palm trees")) {
             System.out.println("'You approach the Palm Trees. The shadow reveals itself. It is an Old Man with a great long beard, like wizard. Do you trust him??'");
-              //examine list out everything in the 
+              
               
         }
         else {
