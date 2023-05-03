@@ -1,70 +1,73 @@
 import java.util.Scanner;
+
 public class Groves extends Location {
     
-    Scanner inside_Groves ;
     Scanner believe_Who ;
+    Scanner inside_Groves; 
      
     
 
     public Groves() {
-        super("Groves", "Groves Road ");
+        
+       
+        
+        super("Groves");
+        this.believe_Who= new Scanner (System.in);
+        this.inside_Groves= new Scanner (System.in);
+
         //adding to the inventory 
-        inventory.put (new Items ("Peaches", "Peaches are a delicious smelling fruit!", true,10 ),"The Peaches") ;
-        inventory.put (new Items ("Apples", " Apples are a delicious and REALLY healthy fruit!", true, 10), "The Apples") ;
-        inventory.put (new Items (" Rainbow Apples", " Apples who shine!", true, -100), "The Rainbow Apples") ;
-        inventory.put (new Items ("Lemons", "It is a tangy but sour yellow fruit !", true, 10),"The Lemons");
+        inventory.put (new Items ("Apples", " Apples are a delicious and REALLY healthy fruit!", true, 10,"inside apple groves"), "The Apples") ;
+        inventory.put (new Items (" Rainbow Apples", " Apples who shine but have a strange scent !", true, -100, "inside apples groves"), "The Rainbow Apples") ;
+        
        
         //opponents in the groves 
-        Opponents_table.put(new Opponents("Edna The Beautiful Witch","HELP ME PLEASE, MY SISTER IS GONNA EAT ME. ",100,false),"The Okay Witch") ;
-        Opponents_table.put(new Opponents("Magda The Okay Witch ","Please understand! She is a dangerous individual ",100,true ),"The Okay Witch");
-
-    } 
-
-    public void Groves_locations (Scanner inside_Groves, Opponents opponents) {  
-
-        System.out.println ("You are in an open field. There are three paths. The first path is filled with lemons but if you listen very carefully you can hear two voices shouting at each other. The second path is a peach groves, it might smell delicious! but you hear growling. Lastly the third is filled with apples, strangely enough you hear nothing. Where do you go ~Lemon Groves~ or ~Apple Groves~? ");
+        Opponents_table.put(new Opponents("Edna The Beautiful Witch","HELP ME PLEASE, MY SISTER IS GONNA EAT ME. ",100,false),"The Beautiful Witch ") ;
+        Opponents_table.put(new Opponents("Magda The Ugly Witch "," Please understand! She is a dangerous individual ",100,true ),"The Ugly Witch ");
         
-        String answer_Groves = inside_Groves.nextLine();
-        if (answer_Groves.equals("Lemon Groves") || answer_Groves.equals("lemon groves")) {
-            System.out.println("You are in the Lemon Groves. There are many ripe lemons around. At the end of the path there are two sisters arguing: the beautiful one is locked in a cage while the ugly sister has the keys.");
-            //the player should lookaround then get their commentary 
-            Player.lookAround(opponents, inventory);
-
-            
-        }
-        else if (answer_Groves.equals("Apple Groves") || answer_Groves.equals("apple groves")) {
-            System.out.println("You are in Apple Groves. There are many ripe Apples around. As you walk throught The Apple Groves, the infected apples you can see. At the end, you see a gray decayed tree full of infected apples  . ");
-            System.out.println("On the tree there is a carved message that says BEWARE THE SILENT KILLER WHO POISON OUR WORLD!!!  . ");
-
-            // i want the player to be able to turn back after this to the original prompt
-             
-        }
-        else  {
-            System.out.println("You must choose! There aren't other paths, you MUST proceed ");
-            
-        }
     } 
 
-    public void Conversation_w_sisters(Scanner believe_Who ) {  
+    public void Groves_locations () {  
 
-        System.out.println ("They look at you. Who's plea do you believe ");
+        System.out.println (" A path opens to an Apple Grove.It is full with delicious apples ready for picking. You hear faint voices  ");
+        System.out.println("Do you want to EXAMINE the apples or follow the VOICES?");
+        String at_Groves = inside_Groves.nextLine();
+        //person can choose to grab apples or follow the voices  
+            if (at_Groves.equals("Examine")||at_Groves.equals("examine")) {
+                System.out.println(inventory);
+                //unfinished should be player. 
+
+            }else if (at_Groves.equals("Voices")||at_Groves.equals("voices")){
+                System.out.println ("As you walked closer, you began to understand what the two sisters are arguing about. ");
+                System.out.println("The Beautiful Sister is locked in a cage while the ugly sister has the keys.");
+                System.out.println(Opponents_table.toString());
+                    System.out.println("Who do you believe");
+                        String answer_believe_Who = believe_Who.nextLine();
+                        if (answer_believe_Who.equals("The Beautiful Sister") || answer_believe_Who.equals("the beautiful sister")) {
+                            System.out.println ("Thank you for believing in me. My sister is an evil horrible witch. She is as ugly on the outside as on the inside HAHAHAHA. ");
+                            System.out.println("Let me repay you with this Apple.It will give you great strenght to survive your journey");
+                            System.out.println ("She picked a blue apple.");
+                                
+                        }
+                        else if (answer_believe_Who.equals("The Ugly Sister") || answer_believe_Who.equals("the ugly sister")) {
+                            System.out.println ("Thank you for believing me. Not a lot of people believe in me. You are a human with a good heart");
+                            System.out.println ("Do you wanna be friends?");
+                                
+                                
+                        }
+                        else  {
+                            System.out.println("You need to choose, Dont leave them waiting");
+                                
+                        }
+            }else{
+
+            }
         
-        String answer_believe_Who = believe_Who.nextLine();
-        if (answer_believe_Who.equals("The Beautiful Sister") || answer_believe_Who.equals("the beautiful sister")) {
+            
+    
+        }
+    
 
-            
-        }
-        else if (answer_believe_Who.equals("The Ugly Sister") || answer_believe_Who.equals("the ugly sister")) {
-           
-            
-             
-        }
-        else  {
-            System.out.println("You need to choose, Dont leave them waiting");
-            
-        }
-    } 
-
+    
 
 
 
@@ -84,7 +87,7 @@ public class Groves extends Location {
     public static void main(String[] args) {
 
         
-
+       
 
 
 
