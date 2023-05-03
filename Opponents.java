@@ -22,12 +22,10 @@ public class Opponents {
     }
 
    
-    
-    // make  a method to exchange the key 
-
-
-
-
+    public String toString(){
+        return "The opponent named "+this.opponents_name+ " says " +this.opponent_commentary+ " to you " ;
+    }
+   
     
 
 
